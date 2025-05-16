@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kanban Board</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+<body class="bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen p-6">
+
+  <h1 class="text-4xl font-bold text-center mb-10 text-gray-800">🚀 My Kanban Board</h1>
+
+  <div class="flex justify-center mb-6">
+    <button onclick="addTask()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl shadow-md">
+      <i class="bi bi-plus-circle"></i> Add Task to "To Do"
+    </button>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <!-- To Do -->
+    <div class="bg-white rounded-2xl shadow-xl p-4">
+      <h2 class="text-xl font-semibold text-blue-600 mb-4">To Do</h2>
+      <div id="todo" class="space-y-4 min-h-[200px]">
+      </div>
+    </div>
+
+    <!-- In Progress -->
+    <div class="bg-white rounded-2xl shadow-xl p-4">
+      <h2 class="text-xl font-semibold text-yellow-600 mb-4">In Progress</h2>
+      <div id="inprogress" class="space-y-4 min-h-[200px]">
+      </div>
+    </div>
+
+    <!-- Done -->
+    <div class="bg-white rounded-2xl shadow-xl p-4">
+      <h2 class="text-xl font-semibold text-green-600 mb-4">Done</h2>
+      <div id="done" class="space-y-4 min-h-[200px]">
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
